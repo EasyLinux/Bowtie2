@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Script pour lancer le conteneur (/usr/local/bin/bowtie2)
+docker container run -it -v $(pwd):/Data snoel/bowtie2

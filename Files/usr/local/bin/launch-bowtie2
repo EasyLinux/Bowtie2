@@ -1,0 +1,19 @@
+#!/bin/bash
+
+clear
+echo -n "Nom du ficher référence : "
+read fa_file
+echo -n "Nom du fichier read_1 : "
+read read_1
+echo -n "Nom du fichier read_2 : "
+read read_2
+echo -n "Nom du fichier de sortie : "
+read out
+echo "Indexation en cours ..."
+
+bowtie2-build $fa_file $fa_file > /dev/null
+bowtie2 -1 $read_1 -2 $read_2 -x $fa_file -S $out 2> Stats.log
+
+echo "Vos résultats sont prêts "
+
+
