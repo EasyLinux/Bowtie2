@@ -7,8 +7,10 @@ Bowtie2 is a tool for bio...
 
 ## Usage
 
+```bash
 docker run -it -v $(pwd):/Data easylinux/bowti2:<tag>
+```
 
 
-*NB*
+**NB**
 Texte
